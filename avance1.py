@@ -54,21 +54,32 @@ def pago_de_compra(cantidad):
         saldo -= cantidad
         escribir_saldo_cliente(saldo)
         print(f"Se han gastado {cantidad:.2f} unidades. Saldo actual: {saldo:.2f}, Gracias por su compra.")
+def añadir_saldo_pregunta():
+    querer_añadir=str(input("¿Quieres depositar dinero?\n"))
+    if querer_añadir.lower()=="si":
+        añadir_dinero_cliente=float(input("Cuanto dinero vas a depositar:\n"))
+        agregar_saldo_cliente(añadir_dinero_cliente)
+    else:
+        print("Okey, proseguiremos con la compra\n")
+
+
+ 
+nombre_empresa=input("¿Como se llama tu empresa?\n")
+print(f"Bienvenido, esta es la Empresa: {nombre_empresa}\n")
 
 while repeticion == 0:
 
-    nombre_empresa=input("¿Como se llama tu empresa?\n")
-    añadir_dinero_cliente=float(input("Cuanto dinero vas a depositar:\n"))
-    agregar_saldo_cliente(añadir_dinero_cliente)
+    añadir_saldo_pregunta()
 
 
-
-    print(f"Bienvenido, esta es la Empresa: {nombre_empresa}")
-    print(f"Esta es la lista de materiales que tenemos en nuestra empresa: {lista_materiales_grupos} ")
+    print(f"Esta es la lista de materiales que tenemos en nuestra empresa: {lista_materiales_grupos} \n")
+    elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el material)"))
+    if elegir_material.lower()=="estructurales":
+        print(materiales_estucturales)
     
 
 
-    print(f"Esta es la cantidad a pagar:{cantidad_pago_total}")
+    print(f"Esta es la cantidad a pagar:{cantidad_pago_total}\n")
     accion_pago=str(input("La desea pagar? (Si)(No):\n"))
     if accion_pago.lower() == "si":
         pago_de_compra(cantidad_pago_total)
@@ -80,5 +91,5 @@ while repeticion == 0:
         repeticion += 1
         print("Se finalizo el programa")
     else:
-        print(".")
+        print("")
 
