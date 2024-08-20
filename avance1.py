@@ -2,6 +2,15 @@ import math
 import random
 import os
 
+lista_materiales_grupos="materiales estucturales, materiales acabado, materiales aislantes,\n materiales unionyadhesivos, materiales instalaciones, materiales naturales,\n materiales recubrimiento"
+materiales_estucturales={"Hormigon":80,"Acero":1,"Madera":400,"Ladrillo":0.30,"Piedra":50,"Aluminio":2}
+materiales_acabado={"Yeso":0.30,"Vidrio":20,"Tejas":0.50,"Pintura":10,"Baldosas":50,"Papel Pintado":4}
+materiales_aislantes={"Lana Mineral":80,"Espuma de poliuretano":10,"Poliestireno expandido":5,"Corcho:":15}
+materiales_unionyadhesivos={"Cemento":8,"Mortero":5,"Siliconas":4,"Resinas epoxi":20}
+materiales_instalaciones={"Cobre":8,"PVC":1,"Polipropileno":4,"Acero galvanizado":3,}
+materiales_naturales={"Madera":400,"Bambú":1,"Adobe":0.10,"Piedra":50}
+materiales_recubrimiento={"Enyesado":6,"Pladur":10,"Azulejos":25,"Mármol":100}
+lista_materiales= materiales_estucturales, materiales_acabado, materiales_aislantes, materiales_unionyadhesivos, materiales_instalaciones, materiales_naturales, materiales_recubrimiento
 
 
 
@@ -51,18 +60,12 @@ while repeticion == 0:
     nombre_empresa=input("¿Como se llama tu empresa?\n")
     añadir_dinero_cliente=float(input("Cuanto dinero vas a depositar:\n"))
     agregar_saldo_cliente(añadir_dinero_cliente)
-    print(saldo_cliente)
+
 
 
     print(f"Bienvenido, esta es la Empresa: {nombre_empresa}")
-
-    materiales_estucturales={"Hormigon":80,"Acero":1,"Madera":400,"Ladrillo":0.30,"Piedra":50,"Aluminio":2}
-    materiales_acabado={"Yeso":0.30,"Vidrio":20,"Tejas":0.50,"Pintura":10,"Baldosas":50,"Papel Pintado":4}
-    materiales_aislantes={"Lana Mineral":80,"Espuma de poliuretano":10,"Poliestireno expandido":5,"Corcho:":15}
-    materiales_unionyadhesivos={"Cemento":8,"Mortero":5,"Siliconas":4,"Resinas epoxi":20}
-    materiales_instalaciones={"Cobre":8,"PVC":1,"Polipropileno":4,"Acero galvanizado":3,}
-    materiales_naturales={"Madera":400,"Bambú":1,"Adobe":0.10,"Piedra":50}
-    materiales_recubrimiento={"Enyesado":6,"Pladur":10,"Azulejos":25,"Mármol":100}
+    print(f"Esta es la lista de materiales que tenemos en nuestra empresa: {lista_materiales_grupos} ")
+    
 
 
     print(f"Esta es la cantidad a pagar:{cantidad_pago_total}")
@@ -73,7 +76,7 @@ while repeticion == 0:
         print("El pago ha sido cancelado")
 
     apagar_programa=str(input("Desea terminar el programa (Si)(No)\n"))
-    if apagar_programa.lower() == "no":
+    if apagar_programa.lower() == "si":
         repeticion += 1
         print("Se finalizo el programa")
     else:
