@@ -40,12 +40,11 @@ def agregar_saldo_cliente(cantidad):
     saldo = leer_saldo_cliente()
     saldo += cantidad
     escribir_saldo_cliente(saldo)
-    print(f"Se han agregado {cantidad:.2f} unidades. Saldo actual: {saldo:.2f}")
+    print(f"Se han agregado {cantidad:.2f} unidades. Saldo actual: {saldo:.2f}\n")
 def agregar_saldo_empresa(cantidad2):
     saldo2 = leer_saldo_empresa()
     saldo2 += cantidad2
-    escribir_saldo_empresa(saldo2)
-    print(f"Se han agregado {cantidad2:.2f} unidades. Saldo actual: {saldo2:.2f}")
+    escribir_saldo_empresa(saldo2)   
 def pago_de_compra(cantidad):
     saldo = leer_saldo_cliente()
     if cantidad > saldo:
@@ -55,7 +54,7 @@ def pago_de_compra(cantidad):
         escribir_saldo_cliente(saldo)
         print(f"Se han gastado {cantidad:.2f} unidades. Saldo actual: {saldo:.2f}, Gracias por su compra.")
 def añadir_saldo_pregunta():
-    querer_añadir=str(input("¿Quieres depositar dinero?\n"))
+    querer_añadir=str(input("¿Quieres depositar dinero? (si)(no)\n"))
     if querer_añadir.lower()=="si":
         añadir_dinero_cliente=float(input("Cuanto dinero vas a depositar:\n"))
         agregar_saldo_cliente(añadir_dinero_cliente)
@@ -70,13 +69,38 @@ print(f"Bienvenido, esta es la Empresa: {nombre_empresa}\n")
 while repeticion == 0:
 
     añadir_saldo_pregunta()
+    repeticion2=0
+    while repeticion2==0:
+        print(f"Esta es la lista de materiales que tenemos en nuestra empresa:\n {lista_materiales_grupos} \n")
+        elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el material)\n"))
+        if elegir_material.lower()=="estructurales":
+            print(materiales_estucturales)
+            desicion_estructural=str(input("¿Cual de los materiales quieres?\n"))
+            if desicion_estructural.lower()=="hormigon":
+                cantidad_material_hormigon=float(input("¿Cuanta cantidad quiere?\n")) 
+            repeticion2 += 1
+        elif elegir_material.lower()=="acabado":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        elif elegir_material.lower()=="aislantes":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        elif elegir_material.lower()=="unionyadhesivos":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        elif elegir_material.lower()=="instalacione":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        elif elegir_material.lower()=="naturales":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        elif elegir_material.lower()=="recubrimiento":
+            print(materiales_estucturales)
+            repeticion2 += 1
+        else:
+            print("Elige un tipo de material que este en la lista / escribe adecuadamente el nombre del material")
+            
 
-
-    print(f"Esta es la lista de materiales que tenemos en nuestra empresa: {lista_materiales_grupos} \n")
-    elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el material)"))
-    if elegir_material.lower()=="estructurales":
-        print(materiales_estucturales)
-    
 
 
     print(f"Esta es la cantidad a pagar:{cantidad_pago_total}\n")
