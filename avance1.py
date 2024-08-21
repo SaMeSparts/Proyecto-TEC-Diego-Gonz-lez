@@ -66,6 +66,7 @@ def añadir_saldo_pregunta():
 nombre_empresa=input("¿Como se llama tu empresa?\n")
 print(f"Bienvenido, esta es la Empresa: {nombre_empresa}\n")
 
+
 while repeticion == 0:
 
     añadir_saldo_pregunta()
@@ -189,6 +190,7 @@ while repeticion == 0:
         pago_de_compra(cantidad_pago_total)
     else:
         print("El pago ha sido cancelado")
+        cantidad_pago_total==0
 
     apagar_programa=str(input("Desea terminar el programa (Si)(No)\n"))
     if apagar_programa.lower() == "si":
