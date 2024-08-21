@@ -40,10 +40,12 @@ def pago_de_compra(cantidad):
         print(f"Se han gastado {cantidad:.2f} unidades. Saldo actual: {saldo:.2f}")
 
 
+
+
 cantidad_material_hormigon=float(input("¿Cuanta cantidad quiere?\n"))
-cantidad =+ cantidad_material_hormigon
 
 añadir_dinero_cliente=float(input("Cuanto dinero vas a depositar:\n"))
 agregar_saldo_cliente(añadir_dinero_cliente)
 suma_dinero_cliente=float(input("Esta es la cantidad a pagar: \n"))
 pago_de_compra(suma_dinero_cliente)
+leer_saldo_cliente()
