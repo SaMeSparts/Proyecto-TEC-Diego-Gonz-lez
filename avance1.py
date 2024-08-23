@@ -160,15 +160,16 @@ while repeticion == 0:
 
             
         elif elegir_material.lower()=="acabado":
+            print("si quiere pagar escribe (Pagar)")
             print(materiales_acabado)
 
             repeticion4=0
             while repeticion4==0:
                 desicion_acabado=str(input("Escoge el material (si quieres regresar escribe [r]):\n"))
-                if desicion_estructural.lower()=="yeso":
+                if desicion_acabado.lower()=="yeso":
                     print(f"El valor del yeso es de {materiales_acabado['Yeso']}$\n")
                     cantidad_material_yeso=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_yeso=cantidad_material_yeso*materiales_acabado["Hormigon"]
+                    precio_yeso=cantidad_material_yeso*materiales_acabado["Yeso"]
                     print(f"El precio del yeso es de: {precio_yeso}$\n")
                     cantidad_pago_total+=precio_yeso
                     pregunta_terminar_yeso=str(input("¿Quieres elegir otro material? (si)(no):\n "))
@@ -178,7 +179,7 @@ while repeticion == 0:
                         repeticion4 += 1
 
                 elif desicion_acabado.lower()=="vidrio":
-                    print(f"El valor del vidrio es de {materiales_acabado['vidrio']}$/ metro cubico\n")
+                    print(f"El valor del vidrio es de {materiales_acabado['Vidrio']}$/ metro cubico\n")
                     cantidad_material_vidrio=float(input("¿Cuanta cantidad quiere?\n"))
                     precio_vidrio=cantidad_material_vidrio*materiales_acabado["Vidrio"]
                     print(f"El precio del vidrio es de: {precio_vidrio}$\n")
@@ -201,43 +202,43 @@ while repeticion == 0:
                     else:
                         repeticion4 += 1
 
-                elif desicion_acabado.lower()=="ladrillo":
-                    print(f"El valor del hormigon es de {materiales_estucturales['Ladrillo']}$\n")
-                    cantidad_material_ladrillo=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_ladrillo=cantidad_material_ladrillo*materiales_estucturales["Ladrillo"]
-                    print(f"El precio del ladrillo es de: {precio_ladrillo}$\n")
-                    cantidad_pago_total+=precio_ladrillo
-                    pregunta_terminar_ladrillo=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_ladrillo.lower()=="si":
+                elif desicion_acabado.lower()=="pintura":
+                    print(f"El valor de la pintura es de {materiales_acabado['Pintura']}$\n")
+                    cantidad_material_pintura=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_pintura=cantidad_material_pintura*materiales_acabado["Pintura"]
+                    print(f"El precio del pintura es de: {precio_pintura}$\n")
+                    cantidad_pago_total+=precio_pintura
+                    pregunta_terminar_pintura=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_pintura.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion4 += 1
                 
-                elif desicion_estructural.lower()=="piedra":
-                    print(f"El valor del hormigon es de {materiales_estucturales['Piedra']}$\n")
-                    cantidad_material_piedra=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_piedra=cantidad_material_piedra*materiales_estucturales["Piedra"]
-                    print(f"El precio del ladrillo es de: {precio_piedra}$\n")
-                    cantidad_pago_total+=precio_piedra
-                    pregunta_terminar_piedra=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_piedra.lower()=="si":
+                elif desicion_acabado.lower()=="baldosas":
+                    print(f"El valor de las baldosas es de {materiales_acabado['Baldosas']}$\n")
+                    cantidad_material_baldosas=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_baldosas=cantidad_material_baldosas*materiales_acabado["Baldosas"]
+                    print(f"El precio de las baldosas es de: {precio_baldosas}$\n")
+                    cantidad_pago_total+=precio_baldosas
+                    pregunta_terminar_baldosas=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_baldosas.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion4 += 1
 
-                elif desicion_estructural.lower()=="aluminio":
-                    print(f"El valor del hormigon es de {materiales_estucturales['Aluminio']}$\n")
-                    cantidad_material_aluminio=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_aluminio=cantidad_material_aluminio*materiales_estucturales["Aluminio"]
-                    print(f"El precio del ladrillo es de: {precio_aluminio}$\n")
-                    cantidad_pago_total+=precio_aluminio
-                    pregunta_terminar_aluminio=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_aluminio.lower()=="si":
+                elif desicion_acabado.lower().replace(" ","")=="papelpintado":
+                    print(f"El valor del papel pintado es de {materiales_acabado['Papel Pintado']}$\n")
+                    cantidad_material_papel_pintado=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_papel_pintado=cantidad_material_papel_pintado*materiales_acabado["Papel Pintado"]
+                    print(f"El precio del papel pintado es de: {precio_papel_pintado}$\n")
+                    cantidad_pago_total+=precio_papel_pintado
+                    pregunta_terminar_papel_pintado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_papel_pintado.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion4 += 1
                 
-                elif desicion_estructural.lower()=="r":
+                elif desicion_acabado.lower()=="r":
                     repeticion4 += 1
 
                 else:
@@ -260,6 +261,8 @@ while repeticion == 0:
             repeticion2 += 1
         elif elegir_material.lower()=="recubrimiento":
             print(materiales_recubrimiento)
+            repeticion2 += 1
+        elif elegir_material.lower()=="pagar":
             repeticion2 += 1
         else:
             print("Elige un tipo de material que este en la lista / escribe adecuadamente el nombre del material")
