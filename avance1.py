@@ -5,7 +5,7 @@ import os
 lista_materiales_grupos="materiales estucturales, materiales acabado, materiales aislantes,\n materiales unionyadhesivos, materiales instalaciones, materiales naturales,\n materiales recubrimiento"
 materiales_estucturales={"Hormigon":80,"Acero":1,"Madera":400,"Ladrillo":0.30,"Piedra":50,"Aluminio":2}
 materiales_acabado={"Yeso":0.30,"Vidrio":20,"Tejas":0.50,"Pintura":10,"Baldosas":50,"Papel Pintado":4}
-materiales_aislantes={"Lana Mineral":80,"Espuma de poliuretano":10,"Poliestireno expandido":5,"Corcho:":15}
+materiales_aislantes={"Lana Mineral":80,"Espuma de poliuretano":10,"Poliestireno expandido":5,"Corcho":15}
 materiales_unionyadhesivos={"Cemento":8,"Mortero":5,"Siliconas":4,"Resinas epoxi":20}
 materiales_instalaciones={"Cobre":8,"PVC":1,"Polipropileno":4,"Acero galvanizado":3,}
 materiales_naturales={"Madera":400,"Bambú":1,"Adobe":0.10,"Piedra":50}
@@ -73,7 +73,9 @@ while repeticion == 0:
     repeticion2=0
     print(f"Esta es la lista de materiales que tenemos en nuestra empresa:\n {lista_materiales_grupos} \n")
     while repeticion2==0:
-        elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el material)\n"))
+        elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el (material)\n"))
+        print("\nsi quiere pagar escribe (Pagar)\n")
+
         if elegir_material.lower()=="estructurales":
             print(f"Los precios estan en pesos $:\n{materiales_estucturales}")
 
@@ -157,11 +159,11 @@ while repeticion == 0:
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
-
+            
             
         elif elegir_material.lower()=="acabado":
-            print("si quiere pagar escribe (Pagar)")
-            print(materiales_acabado)
+            print(f"Los precios estan en pesos $:\n{materiales_acabado}")
+
 
             repeticion4=0
             while repeticion4==0:
@@ -248,8 +250,68 @@ while repeticion == 0:
 
             
         elif elegir_material.lower()=="aislantes":
-            print(materiales_aislantes)
-            repeticion2 += 1
+            print(f"Los precios estan en pesos $:\n{materiales_aislantes}")
+
+
+            repeticion5=0
+            while repeticion5==0:
+                desicion_aislantes=str(input("Escoge el material (si quieres regresar escribe [r]):\n"))
+
+                if desicion_aislantes.lower().replace(" ", "")=="lanamineral":
+                    print(f"El valor de la lana mineral es de {materiales_aislantes['Lana Mineral']}$\n")
+                    cantidad_material_lana_mineral=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_lana_mineral=cantidad_material_lana_mineral*materiales_aislantes["Lana Mineral"]
+                    print(f"El precio de la lana mineral es de: {precio_lana_mineral}$\n")
+                    cantidad_pago_total+=precio_lana_mineral
+                    pregunta_terminar_lana_mineral=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_lana_mineral.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion5 += 1
+
+                elif desicion_aislantes.lower().replace(" ","")=="espumadepoliuretano":
+                    print(f"El valor de la Espuma de poliuretano es de {materiales_aislantes['Espuma de poliuretano']}$/ metro cubico\n")
+                    cantidad_material_espuma=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_espuma=cantidad_material_espuma*materiales_aislantes["Espuma de poliuretano"]
+                    print(f"El precio de la Espuma de poliuretano es de: {precio_espuma}$\n")
+                    cantidad_pago_total+=precio_espuma
+                    pregunta_terminar_espuma=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_espuma.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion5 += 1
+
+                elif desicion_aislantes.lower().replace(" ","")=="poliestirenoexpandido":
+                    print(f"El valor del Poliestireno expandido es de {materiales_aislantes['Poliestireno expandido']}$\n")
+                    cantidad_material_expandido=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_expandido=cantidad_material_expandido*materiales_aislantes["Poliestireno expandido"]
+                    print(f"El precio del Poliestireno expandido es de {precio_expandido}$\n")
+                    cantidad_pago_total+=precio_expandido
+                    pregunta_terminar_expandido=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_expandido.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion5 += 1
+
+                elif desicion_aislantes.lower()=="corcho":
+                    print(f"El valor del corcho es de {materiales_aislantes['Corcho']}$\n")
+                    cantidad_material_corcho=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_corcho=cantidad_material_corcho*materiales_aislantes["Corcho"]
+                    print(f"El precio del corcho es de: {precio_corcho}$\n")
+                    cantidad_pago_total+=precio_corcho
+                    pregunta_terminar_corcho=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_corcho.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion5 += 1
+                
+                elif desicion_acabado.lower()=="r":
+                    repeticion5  += 1
+
+                else:
+                    print("elige un material de la lista/ escribe correctamente el material")
+
+
         elif elegir_material.lower() and elegir_material.strip()=="unionyadhesivos":
             print(materiales_unionyadhesivos)
             repeticion2 += 1
