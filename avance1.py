@@ -446,6 +446,7 @@ while repeticion == 0:
     accion_pago=str(input("La desea pagar? (Si)(No):\n"))
     if accion_pago.lower() == "si":
         pago_de_compra(cantidad_pago_total)
+        cantidad_pago_total==0
     else:
         print("El pago ha sido cancelado")
         cantidad_pago_total==0
