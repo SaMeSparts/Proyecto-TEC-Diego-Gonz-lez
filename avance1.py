@@ -246,9 +246,7 @@ while repeticion == 0:
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
 
-
-
-            
+          
         elif elegir_material.lower()=="aislantes":
             print(f"Los precios estan en pesos $:\n{materiales_aislantes}")
 
@@ -305,16 +303,75 @@ while repeticion == 0:
                     else:
                         repeticion5 += 1
                 
-                elif desicion_acabado.lower()=="r":
+                elif desicion_aislantes.lower()=="r":
                     repeticion5  += 1
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
 
 
-        elif elegir_material.lower() and elegir_material.strip()=="unionyadhesivos":
+        elif elegir_material.lower().replace(" ","")=="unionyadhesivos":
             print(materiales_unionyadhesivos)
-            repeticion2 += 1
+
+            repeticion6=0
+            while repeticion6==0:
+                desicion_unionyadhesivos=str(input("Escoge el material (si quieres regresar escribe [r]):\n"))
+
+                if desicion_unionyadhesivos.lower()=="cemento":
+                    print(f"El valor del cemento es de {materiales_unionyadhesivos['Cemento']}$\n")
+                    cantidad_material_cemento=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_cemento=cantidad_material_cemento*materiales_unionyadhesivos["Cemento"]
+                    print(f"El precio del cemento es de: {precio_cemento}$\n")
+                    cantidad_pago_total+=precio_cemento
+                    pregunta_terminar_cemento=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_cemento.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion6 += 1
+
+                elif desicion_unionyadhesivos.lower()=="mortero":
+                    print(f"El valor del mortero es de {materiales_unionyadhesivos['Mortero']}$/ metro cubico\n")
+                    cantidad_material_mortero=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_mortero=cantidad_material_mortero*materiales_unionyadhesivos["Mortero"]
+                    print(f"El precio del mortero es de: {precio_mortero}$\n")
+                    cantidad_pago_total+=precio_mortero
+                    pregunta_terminar_mortero=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_mortero.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion6 += 1
+
+                elif desicion_unionyadhesivos.lower()=="siliconas":
+                    print(f"El valor de las siliconas es de {materiales_unionyadhesivos['Siliconas']}$\n")
+                    cantidad_material_siliconas=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_siliconas=cantidad_material_siliconas*materiales_unionyadhesivos["Siliconas"]
+                    print(f"El precio de las siliconas es de {precio_siliconas}$\n")
+                    cantidad_pago_total+=precio_siliconas
+                    pregunta_terminar_siliconas=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_siliconas.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion6 += 1
+
+                elif desicion_unionyadhesivos.lower().replace(" ","")=="resinaepoxi":
+                    print(f"El valor de las resinas epoxi es de {materiales_unionyadhesivos['Resinas epoxi']}$\n")
+                    cantidad_material_resina=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_resina=cantidad_material_resina*materiales_unionyadhesivos["Resinas epoxi"]
+                    print(f"El precio de las resinas epoxi es de: {precio_resina}$\n")
+                    cantidad_pago_total+=precio_resina
+                    pregunta_terminar_resina=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_resina.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion6 += 1
+                
+                elif desicion_unionyadhesivos.lower()=="r":
+                    repeticion5  += 6
+
+                else:
+                    print("elige un material de la lista/ escribe correctamente el material")
+
+
         elif elegir_material.lower()=="instalaciones":
             print(materiales_instalaciones)
             repeticion2 += 1
