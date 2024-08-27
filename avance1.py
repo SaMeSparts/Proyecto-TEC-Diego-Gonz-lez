@@ -430,7 +430,59 @@ while repeticion == 0:
 
         elif elegir_material.lower()=="naturales":
             print(materiales_naturales)
-            repeticion2 += 1
+            repeticion8=0
+            while repeticion8==0:
+                desicion_naturales=str(input("Escoge el material (si quieres regresar escribe [r]):\n"))
+
+                if desicion_naturales.lower()=="cobre":
+                    print(f"El valor del cobre es de {materiales_naturales['Cobre']}$\n")
+                    cantidad_material_cobre=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_cobre=cantidad_material_cobre*materiales_naturales["Cobre"]
+                    print(f"El precio del cobre es de: {precio_cobre}$\n")
+                    cantidad_pago_total+=precio_cobre
+                    pregunta_terminar_cobre=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_cobre.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion8 += 1
+
+                elif desicion_naturales.lower()=="pvc":
+                    print(f"El valor del PVC es de {materiales_naturales['PVC']}$/ metro cubico\n")
+                    cantidad_material_pvc=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_pvc=cantidad_material_pvc*materiales_naturales["PVC"]
+                    print(f"El precio del PVC es de: {precio_pvc}$\n")
+                    cantidad_pago_total+=precio_pvc
+                    pregunta_terminar_pvc=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_pvc.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion8 += 1
+
+                elif desicion_naturales.lower()=="polipropileno":
+                    print(f"El valor del polipropileno es de {materiales_naturales['Polipropileno']}$\n")
+                    cantidad_material_polipropileno=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_polipropileno=cantidad_material_polipropileno*materiales_naturales["Polipropileno"]
+                    print(f"El precio del polipropileno es de {precio_polipropileno}$\n")
+                    cantidad_pago_total+=precio_polipropileno
+                    pregunta_terminar_polipropileno=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_polipropileno.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion8 += 1
+
+                elif desicion_instalaciones.lower().replace(" ","")=="acerogalvanizado":
+                    print(f"El valor del acero galvanizado es de {materiales_instalaciones['Acero galvanizado']}$\n")
+                    cantidad_material_acero_galvanizado=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_acero_galvanizado=cantidad_material_acero_galvanizado*materiales_instalaciones["Acero galvanizado"]
+                    print(f"El precio del acero galvanizado es de: {precio_acero_galvanizado}$\n")
+                    cantidad_pago_total+=precio_acero_galvanizado
+                    pregunta_terminar_acero_galvanizado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_acero_galvanizado.lower()=="si":
+                        print("-------------------")
+                    else:
+                        repeticion8 += 1
+
+
         elif elegir_material.lower()=="recubrimiento":
             print(materiales_recubrimiento)
             repeticion2 += 1
