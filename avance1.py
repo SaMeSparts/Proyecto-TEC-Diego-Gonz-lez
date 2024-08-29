@@ -426,6 +426,11 @@ while repeticion == 0:
                         print("-------------------")
                     else:
                         repeticion7 += 1
+                elif desicion_estructural.lower()=="r":
+                    repeticion3 += 1
+
+                else:
+                    print("elige un material de la lista/ escribe correctamente el material")
 
 
         elif elegir_material.lower()=="naturales":
@@ -469,6 +474,7 @@ while repeticion == 0:
                         print("-------------------")
                     else:
                         repeticion8 += 1
+            
 
                 elif desicion_naturales.lower()=="piedra":
                     print(f"El valor de la piedra es de {materiales_naturales['Piedra']}$\n")
@@ -481,6 +487,12 @@ while repeticion == 0:
                         print("-------------------")
                     else:
                         repeticion8 += 1
+
+                elif desicion_estructural.lower()=="r":
+                    repeticion3 += 1
+
+                else:
+                    print("elige un material de la lista/ escribe correctamente el material")
 
 
         elif elegir_material.lower()=="recubrimiento":
@@ -536,6 +548,11 @@ while repeticion == 0:
                         print("-------------------")
                     else:
                         repeticion9 += 1
+                elif desicion_estructural.lower()=="r":
+                    repeticion3 += 1
+
+                else:
+                    print("elige un material de la lista/ escribe correctamente el material")
 
             
         elif elegir_material.lower()=="pagar":
