@@ -367,7 +367,7 @@ while repeticion == 0:
                         repeticion6 += 1
                 
                 elif desicion_unionyadhesivos.lower()=="r":
-                    repeticion5  += 6
+                    repeticion6  += 6
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
@@ -427,7 +427,7 @@ while repeticion == 0:
                     else:
                         repeticion7 += 1
                 elif desicion_estructural.lower()=="r":
-                    repeticion3 += 1
+                    repeticion7 += 1
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
@@ -489,7 +489,7 @@ while repeticion == 0:
                         repeticion8 += 1
 
                 elif desicion_estructural.lower()=="r":
-                    repeticion3 += 1
+                    repeticion8 += 1
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
@@ -513,38 +513,38 @@ while repeticion == 0:
                     else:
                         repeticion9 += 1
 
-                elif desicion_recubrimiento.lower()=="pvc":
-                    print(f"El valor del PVC es de {materiales_recubrimiento['PVC']}$/ metro cubico\n")
-                    cantidad_material_pvc=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_pvc=cantidad_material_pvc*materiales_recubrimiento["PVC"]
-                    print(f"El precio del PVC es de: {precio_pvc}$\n")
-                    cantidad_pago_total+=precio_pvc
-                    pregunta_terminar_pvc=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_pvc.lower()=="si":
+                elif desicion_recubrimiento.lower()=="pladur":
+                    print(f"El valor del pladur es de {materiales_recubrimiento['Pladur']}$/ metro cubico\n")
+                    cantidad_material_pladur=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_pladur=cantidad_material_pladur*materiales_recubrimiento["Pladur"]
+                    print(f"El precio del pladur es de: {precio_pladur}$\n")
+                    cantidad_pago_total+=precio_pladur
+                    pregunta_terminar_pladur=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_pladur.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion9 += 1
 
-                elif desicion_recubrimiento.lower()=="polipropileno":
-                    print(f"El valor del polipropileno es de {materiales_recubrimiento['Polipropileno']}$\n")
-                    cantidad_material_polipropileno=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_polipropileno=cantidad_material_polipropileno*materiales_recubrimiento["Polipropileno"]
-                    print(f"El precio del polipropileno es de {precio_polipropileno}$\n")
-                    cantidad_pago_total+=precio_polipropileno
-                    pregunta_terminar_polipropileno=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_polipropileno.lower()=="si":
+                elif desicion_recubrimiento.lower()=="azulejos":
+                    print(f"El valor del azulejo es de {materiales_recubrimiento['Azulejos']}$\n")
+                    cantidad_material_azulejo=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_azulejo=cantidad_material_azulejo*materiales_recubrimiento["Azulejos"]
+                    print(f"El precio del azulejo es de {precio_azulejo}$\n")
+                    cantidad_pago_total+=precio_azulejo
+                    pregunta_terminar_azulejo=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_azulejo.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion9 += 1
 
-                elif desicion_recubrimiento.lower().replace(" ","")=="acerogalvanizado":
-                    print(f"El valor del acero galvanizado es de {materiales_recubrimiento['Acero galvanizado']}$\n")
-                    cantidad_material_acero_galvanizado=float(input("¿Cuanta cantidad quiere?\n"))
-                    precio_acero_galvanizado=cantidad_material_acero_galvanizado*materiales_recubrimiento["Acero galvanizado"]
-                    print(f"El precio del acero galvanizado es de: {precio_acero_galvanizado}$\n")
-                    cantidad_pago_total+=precio_acero_galvanizado
-                    pregunta_terminar_acero_galvanizado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
-                    if pregunta_terminar_acero_galvanizado.lower()=="si":
+                elif desicion_recubrimiento.lower()=="marmol":
+                    print(f"El valor del marmol es de {materiales_recubrimiento['Marmol']}$\n")
+                    cantidad_material_marmol=float(input("¿Cuanta cantidad quiere?\n"))
+                    precio_marmol=cantidad_material_marmol*materiales_recubrimiento["Marmol"]
+                    print(f"El precio del marmol es de: {precio_marmol}$\n")
+                    cantidad_pago_total+=precio_marmol
+                    pregunta_terminar_marmol=str(input("¿Quieres elegir otro material? (si)(no):\n "))
+                    if pregunta_terminar_marmol.lower()=="si":
                         print("-------------------")
                     else:
                         repeticion9 += 1
