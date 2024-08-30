@@ -628,19 +628,26 @@ while repeticion == 0:
             
 
 
-
+    num100=0
     print(f"Esta es la cantidad a pagar:{cantidad_pago_total}\n")
-    accion_pago=str(input("La desea pagar? (Si)(No):\n"))
-    if accion_pago.lower() == "si":
-        pago_de_compra(cantidad_pago_total)
-        cantidad_pago_total==0
-    else:
-        print("El pago ha sido cancelado")
-        cantidad_pago_total==0
+    
+    while num100==0:
+        accion_pago=str(input("La desea pagar? (Si)(No):\n"))
+        if accion_pago.lower() == "si":
+            pago_de_compra(cantidad_pago_total)
+            cantidad_pago_total -= cantidad_pago_total
+            num100+=1
+        elif accion_pago.lower()=="no":
+            print("El pago ha sido cancelado")
+            cantidad_pago_total -= cantidad_pago_total
+        else:
+            print("escribe correctamente")
+            num100+=1
 
     apagar_programa=str(input("Desea terminar el programa (Si)(No)\n"))
     if apagar_programa.lower() == "si":
         repeticion += 1
+        num100 +=1
         print("Se finalizo el programa")
     else:
         print("")
