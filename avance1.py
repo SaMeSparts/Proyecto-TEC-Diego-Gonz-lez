@@ -170,8 +170,8 @@ while repeticion == 0:
                 elif desicion_estructural.lower()=="r":
                     repeticion3 += 1
 
-                else:
-                    print("elige un material de la lista/ escribe correctamente el material")
+            else:
+                print("elige un material de la lista/ escribe correctamente el material")
             
             
         elif elegir_material.lower()=="acabado":
