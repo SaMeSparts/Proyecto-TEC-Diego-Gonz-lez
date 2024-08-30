@@ -120,7 +120,7 @@ while repeticion == 0:
                     pregunta_terminar_madera=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_madera.lower()=="si":
                         print("-------------------")
-                    elif pregunta_terminar_aluminio.lower()=="no":
+                    elif pregunta_terminar_madera.lower()=="no":
                         repeticion3 += 1
                     else:
                         print("Escribe correctamente\n")
@@ -475,7 +475,7 @@ while repeticion == 0:
                     else:
                         print("Escribe correctamente\n")
 
-                elif desicion_estructural.lower()=="r":
+                elif desicion_instalaciones.lower()=="r":
                     repeticion7 += 1
 
                 else:
@@ -545,7 +545,7 @@ while repeticion == 0:
                     else:
                         print("Escribe correctamente\n")
 
-                elif desicion_estructural.lower()=="r":
+                elif desicion_naturales.lower()=="r":
                     repeticion8 += 1
 
                 else:
@@ -614,7 +614,7 @@ while repeticion == 0:
                     else:
                         print("Escribe correctamente\n")
 
-                elif desicion_estructural.lower()=="r":
+                elif desicion_recubrimiento.lower()=="r":
                     repeticion9 += 1
 
                 else:
