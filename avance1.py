@@ -92,8 +92,10 @@ while repeticion == 0:
                     pregunta_terminar_hormigon=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_hormigon.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_hormigon.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_estructural.lower()=="acero":
                     print(f"El valor del acero es de {materiales_estucturales['Acero']}$/ metro cubico\n")
@@ -104,8 +106,10 @@ while repeticion == 0:
                     pregunta_terminar_acero=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_acero.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_acero.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_estructural.lower()=="madera":
                     print(f"El valor de la madera es de {materiales_estucturales['Madera']}$\n")
@@ -116,8 +120,10 @@ while repeticion == 0:
                     pregunta_terminar_madera=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_madera.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_aluminio.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_estructural.lower()=="ladrillo":
                     print(f"El valor del ladrillo es de {materiales_estucturales['Ladrillo']}$\n")
@@ -128,8 +134,10 @@ while repeticion == 0:
                     pregunta_terminar_ladrillo=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_ladrillo.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_ladrillo.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
                 
                 elif desicion_estructural.lower()=="piedra":
                     print(f"El valor de la piedra es de {materiales_estucturales['Piedra']}$\n")
@@ -140,8 +148,10 @@ while repeticion == 0:
                     pregunta_terminar_piedra=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_piedra.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_piedra.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_estructural.lower()=="aluminio":
                     print(f"El valor del aluminio es de {materiales_estucturales['Aluminio']}$\n")
@@ -152,8 +162,10 @@ while repeticion == 0:
                     pregunta_terminar_aluminio=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_aluminio.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_aluminio.lower()=="no":
                         repeticion3 += 1
+                    else:
+                        print("Escribe correctamente\n")
                 
                 elif desicion_estructural.lower()=="r":
                     repeticion3 += 1
@@ -178,8 +190,10 @@ while repeticion == 0:
                     pregunta_terminar_yeso=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_yeso.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_yeso.lower()=="no":
                         repeticion4 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_acabado.lower()=="vidrio":
                     print(f"El valor del vidrio es de {materiales_acabado['Vidrio']}$/ metro cubico\n")
@@ -190,8 +204,10 @@ while repeticion == 0:
                     pregunta_terminar_vidrio=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_vidrio.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_vidrio.lower()=="no":
                         repeticion4 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_acabado.lower()=="tejas":
                     print(f"El valor de las tejas es de {materiales_acabado['Tejas']}$\n")
@@ -202,8 +218,10 @@ while repeticion == 0:
                     pregunta_terminar_tejas=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_tejas.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_tejas.lower()=="no":
                         repeticion4 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_acabado.lower()=="pintura":
                     print(f"El valor de la pintura es de {materiales_acabado['Pintura']}$\n")
@@ -214,8 +232,10 @@ while repeticion == 0:
                     pregunta_terminar_pintura=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_pintura.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_pintura.lower()=="no":
                         repeticion4 += 1
+                    else:
+                        print("Escribe correctamente\n")
                 
                 elif desicion_acabado.lower()=="baldosas":
                     print(f"El valor de las baldosas es de {materiales_acabado['Baldosas']}$\n")
@@ -226,8 +246,10 @@ while repeticion == 0:
                     pregunta_terminar_baldosas=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_baldosas.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_baldosas.lower()=="no":
                         repeticion4 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_acabado.lower().replace(" ","")=="papelpintado":
                     print(f"El valor del papel pintado es de {materiales_acabado['Papel Pintado']}$\n")
@@ -238,8 +260,10 @@ while repeticion == 0:
                     pregunta_terminar_papel_pintado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_papel_pintado.lower()=="si":
                         print("-------------------")
+                    elif pregunta_terminar_papel_pintado.lower()=="no":
+                        repeticion3 += 1
                     else:
-                        repeticion4 += 1
+                        print("Escribe correctamente\n")
                 
                 elif desicion_acabado.lower()=="r":
                     repeticion4 += 1
@@ -265,8 +289,10 @@ while repeticion == 0:
                     pregunta_terminar_lana_mineral=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_lana_mineral.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_lana_mineral.lower()=="no":
                         repeticion5 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_aislantes.lower().replace(" ","")=="espumadepoliuretano":
                     print(f"El valor de la Espuma de poliuretano es de {materiales_aislantes['Espuma de poliuretano']}$/ metro cubico\n")
@@ -277,8 +303,10 @@ while repeticion == 0:
                     pregunta_terminar_espuma=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_espuma.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_espuma.lower()=="no":
                         repeticion5 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_aislantes.lower().replace(" ","")=="poliestirenoexpandido":
                     print(f"El valor del Poliestireno expandido es de {materiales_aislantes['Poliestireno expandido']}$\n")
@@ -289,8 +317,10 @@ while repeticion == 0:
                     pregunta_terminar_expandido=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_expandido.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_expandido.lower()=="no":
                         repeticion5 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_aislantes.lower()=="corcho":
                     print(f"El valor del corcho es de {materiales_aislantes['Corcho']}$\n")
@@ -301,8 +331,10 @@ while repeticion == 0:
                     pregunta_terminar_corcho=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_corcho.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_corcho.lower()=="no":
                         repeticion5 += 1
+                    else:
+                        print("Escribe correctamente\n")
                 
                 elif desicion_aislantes.lower()=="r":
                     repeticion5  += 1
@@ -327,8 +359,10 @@ while repeticion == 0:
                     pregunta_terminar_cemento=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_cemento.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_cemento.lower()=="no":
                         repeticion6 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_unionyadhesivos.lower()=="mortero":
                     print(f"El valor del mortero es de {materiales_unionyadhesivos['Mortero']}$/ metro cubico\n")
@@ -339,8 +373,10 @@ while repeticion == 0:
                     pregunta_terminar_mortero=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_mortero.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_mortero.lower()=="no":
                         repeticion6 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_unionyadhesivos.lower()=="siliconas":
                     print(f"El valor de las siliconas es de {materiales_unionyadhesivos['Siliconas']}$\n")
@@ -351,8 +387,10 @@ while repeticion == 0:
                     pregunta_terminar_siliconas=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_siliconas.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_siliconas.lower()=="no":
                         repeticion6 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_unionyadhesivos.lower().replace(" ","")=="resinasepoxi":
                     print(f"El valor de las resinas epoxi es de {materiales_unionyadhesivos['Resinas epoxi']}$\n")
@@ -363,8 +401,10 @@ while repeticion == 0:
                     pregunta_terminar_resina=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_resina.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_resina.lower()=="no":
                         repeticion6 += 1
+                    else:
+                        print("Escribe correctamente\n")
                 
                 elif desicion_unionyadhesivos.lower()=="r":
                     repeticion6  += 6
@@ -388,8 +428,10 @@ while repeticion == 0:
                     pregunta_terminar_cobre=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_cobre.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_cobre.lower()=="no":
                         repeticion7 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_instalaciones.lower()=="pvc":
                     print(f"El valor del PVC es de {materiales_instalaciones['PVC']}$/ metro cubico\n")
@@ -400,8 +442,10 @@ while repeticion == 0:
                     pregunta_terminar_pvc=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_pvc.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_pvc.lower()=="no":
                         repeticion7 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_instalaciones.lower()=="polipropileno":
                     print(f"El valor del polipropileno es de {materiales_instalaciones['Polipropileno']}$\n")
@@ -412,8 +456,10 @@ while repeticion == 0:
                     pregunta_terminar_polipropileno=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_polipropileno.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_polipropileno.lower()=="no":
                         repeticion7 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_instalaciones.lower().replace(" ","")=="acerogalvanizado":
                     print(f"El valor del acero galvanizado es de {materiales_instalaciones['Acero galvanizado']}$\n")
@@ -424,8 +470,11 @@ while repeticion == 0:
                     pregunta_terminar_acero_galvanizado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_acero_galvanizado.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_acero_galvanizado.lower()=="no":
                         repeticion7 += 1
+                    else:
+                        print("Escribe correctamente\n")
+
                 elif desicion_estructural.lower()=="r":
                     repeticion7 += 1
 
@@ -448,8 +497,10 @@ while repeticion == 0:
                     pregunta_terminar_madera2=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_madera2.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_madera2.lower()=="no":
                         repeticion8 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_naturales.lower()=="bambu":
                     print(f"El valor del bambu es de {materiales_naturales['Bambu']}$/ metro cubico\n")
@@ -460,8 +511,10 @@ while repeticion == 0:
                     pregunta_terminar_bambu=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_bambu.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_bambu.lower()=="no":
                         repeticion8 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_naturales.lower()=="adobe":
                     print(f"El valor del adobe es de {materiales_naturales['Adobe']}$\n")
@@ -472,8 +525,10 @@ while repeticion == 0:
                     pregunta_terminar_adobe=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_adobe.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_adobe.lower()=="no":
                         repeticion8 += 1
+                    else:
+                        print("Escribe correctamente\n")
             
 
                 elif desicion_naturales.lower()=="piedra":
@@ -485,8 +540,10 @@ while repeticion == 0:
                     pregunta_terminar_piedra2=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_piedra2.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_piedra2.lower()=="no":
                         repeticion8 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_estructural.lower()=="r":
                     repeticion8 += 1
@@ -510,8 +567,10 @@ while repeticion == 0:
                     pregunta_terminar_enyesado=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_enyesado.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_enyesado.lower()=="no":
                         repeticion9 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_recubrimiento.lower()=="pladur":
                     print(f"El valor del pladur es de {materiales_recubrimiento['Pladur']}$/ metro cubico\n")
@@ -522,8 +581,10 @@ while repeticion == 0:
                     pregunta_terminar_pladur=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_pladur.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_pladur.lower()=="no":
                         repeticion9 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_recubrimiento.lower()=="azulejos":
                     print(f"El valor del azulejo es de {materiales_recubrimiento['Azulejos']}$\n")
@@ -534,8 +595,10 @@ while repeticion == 0:
                     pregunta_terminar_azulejo=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_azulejo.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_azulejo.lower()=="no":
                         repeticion9 += 1
+                    else:
+                        print("Escribe correctamente\n")
 
                 elif desicion_recubrimiento.lower()=="marmol":
                     print(f"El valor del marmol es de {materiales_recubrimiento['Marmol']}$\n")
@@ -546,10 +609,13 @@ while repeticion == 0:
                     pregunta_terminar_marmol=str(input("¿Quieres elegir otro material? (si)(no):\n "))
                     if pregunta_terminar_marmol.lower()=="si":
                         print("-------------------")
-                    else:
+                    elif pregunta_terminar_marmol.lower()=="no":
                         repeticion9 += 1
+                    else:
+                        print("Escribe correctamente\n")
+
                 elif desicion_estructural.lower()=="r":
-                    repeticion3 += 1
+                    repeticion9 += 1
 
                 else:
                     print("elige un material de la lista/ escribe correctamente el material")
