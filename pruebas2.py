@@ -1,10 +1,3 @@
-cuentas=["A01713489"]
-cuenta_num=0
-cuenta_num2=0
-cuenta_num3=0
-cuenta_num4=0
-
-
 class Gestor_cuentas:
     def __init__(self):
         self.cuentas=[]
@@ -41,14 +34,21 @@ print(gestor_cuentas.mostrar_cuentas())
 
 
 
-'''while cuenta_num==0:
+while cuenta_num==0:
     pregunta_cuenta=str(input("Tienes cuenta o eres nuevo?(cuenta)(nuevo)\n"))
     if pregunta_cuenta.lower()=="cuenta":
-        cuenta=str(input("Escribe es tu cuenta?\n"))
+        desicion_usuario=str(input("Usuario o Admin\n"))
 
-        if cuenta in gestor_cuentas.__init__():
-            print("Cual es la contraseña:\n")
+        if desicion_usuario.lower()=="usuario":                
+            cuenta=str(input("Escribe tu cuenta?\n"))
+            if cuenta in gestor_cuentas.__init__():
+                print("Cual es la contraseña:\n")
 
+        if desicion_usuario.lower()=="admin":                    
+            cuenta=str(input("Escribe tu cuenta?\n"))
+            if cuenta in gestor_cuentas.__init__():
+                print("Cual es la contraseña:\n")
+        
     
     elif pregunta_cuenta.lower()=="nuevo":
         cuenta_nueva=str(input("Escribe el nombre de tu nueva cuenta?\n"))
@@ -56,4 +56,4 @@ print(gestor_cuentas.mostrar_cuentas())
         contraseña_nueva=str(input("Escribe la contraseña\n"))
         gestor_contraseñas.agregar_contraseña(contraseña_nueva)
     else:
-        print("escribe correctamente: ")'''
+        print("escribe correctamente: ")
