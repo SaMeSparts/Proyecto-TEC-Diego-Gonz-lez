@@ -29,18 +29,19 @@ class Gestor_contraseñas:
             print("esta contraseña ya existe \n")
         else:
             self.contraseña.append(contraseña)
-            print(f"la cuenta {cuenta} ha sido agregada")
+            print(f"la cuenta {contraseña} ha sido agregada")
     
     def mostrar_contraseñas(self):
         return self.contraseña
 
             
 gestor_cuentas=Gestor_cuentas()
-gestor_contraseñas=Gestor_cuentas()
+gestor_contraseñas=Gestor_contraseñas()
+print(gestor_cuentas.mostrar_cuentas())
 
 
 
-while cuenta_num==0:
+'''while cuenta_num==0:
     pregunta_cuenta=str(input("Tienes cuenta o eres nuevo?(cuenta)(nuevo)\n"))
     if pregunta_cuenta.lower()=="cuenta":
         cuenta=str(input("Escribe es tu cuenta?\n"))
@@ -51,7 +52,8 @@ while cuenta_num==0:
     
     elif pregunta_cuenta.lower()=="nuevo":
         cuenta_nueva=str(input("Escribe el nombre de tu nueva cuenta?\n"))
-        
-
+        gestor_cuentas.agregar_cuenta(cuenta_nueva)
+        contraseña_nueva=str(input("Escribe la contraseña\n"))
+        gestor_contraseñas.agregar_contraseña(contraseña_nueva)
     else:
-        print("escribe correctamente: ")
+        print("escribe correctamente: ")'''
