@@ -1,16 +1,57 @@
-
-materiales_estucturales={"Hormigon":80,"Acero":1,"Madera":400,"Ladrillo":0.30,"Piedra":50,"Aluminio":2}
-materiales_acabado={"Yeso":0.30,"Vidrio":20,"Tejas":0.50,"Pintura":10,"Baldosas":50,"Papel Pintado":4}
-materiales_aislantes={"Lana Mineral":80,"Espuma de poliuretano":10,"Poliestireno expandido":5,"Corcho:":15}
-materiales_unionyadhesivos={"Cemento":8,"Mortero":5,"Siliconas":4,"Resinas epoxi":20}
-materiales_instalaciones={"Cobre":8,"PVC":1,"Polipropileno":4,"Acero galvanizado":3,}
-materiales_naturales={"Madera":400,"Bambú":1,"Adobe":0.10,"Piedra":50}
-materiales_recubrimiento={"Enyesado":6,"Pladur":10,"Azulejos":25,"Mármol":100}
-lista_materiales= materiales_estucturales, materiales_acabado, materiales_aislantes, materiales_unionyadhesivos, materiales_instalaciones, materiales_naturales, materiales_recubrimiento
+cuentas=["A01713489"]
+cuenta_num=0
+cuenta_num2=0
+cuenta_num3=0
+cuenta_num4=0
 
 
-print(f"El valor del hormigon es de {materiales_estucturales['Hormigon']}$")
+class Gestor_cuentas:
+    def __init__(self):
+        self.cuentas=[]
 
-cantidad_material_hormigon=float(input("¿Cuanta cantidad quiere?\n"))
-precio_final=cantidad_material_hormigon*materiales_estucturales["Hormigon"]
-print(precio_final)
+    def agregar_cuenta(self,cuenta):
+        if cuenta in self.cuentas:
+            print("Esta cuenta ya existe \n")
+        else:
+            self.cuentas.append(cuenta)
+            print(f"la cuenta {cuenta} ha sido agregada")
+
+    def mostrar_cuentas(self):
+        return self.cuentas
+
+        
+class Gestor_contraseñas:
+    def __init__(self):
+        self.contraseña=[]
+
+    def agregar_contraseña(self,contraseña):
+        if contraseña in self.contraseña:
+            print("esta contraseña ya existe \n")
+        else:
+            self.contraseña.append(contraseña)
+            print(f"la cuenta {cuenta} ha sido agregada")
+    
+    def mostrar_contraseñas(self):
+        return self.contraseña
+
+            
+gestor_cuentas=Gestor_cuentas()
+gestor_contraseñas=Gestor_cuentas()
+
+
+
+while cuenta_num==0:
+    pregunta_cuenta=str(input("Tienes cuenta o eres nuevo?(cuenta)(nuevo)\n"))
+    if pregunta_cuenta.lower()=="cuenta":
+        cuenta=str(input("Escribe es tu cuenta?\n"))
+
+        if cuenta in gestor_cuentas.__init__():
+            print("Cual es la contraseña:\n")
+
+    
+    elif pregunta_cuenta.lower()=="nuevo":
+        cuenta_nueva=str(input("Escribe el nombre de tu nueva cuenta?\n"))
+        
+
+    else:
+        print("escribe correctamente: ")
