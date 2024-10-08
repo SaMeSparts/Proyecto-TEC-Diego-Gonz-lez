@@ -1,3 +1,10 @@
+cuentas=["A01713489"]
+cuenta_num=0
+cuenta_num2=0
+cuenta_num3=0
+cuenta_num4=0
+
+
 class Gestor_cuentas:
     def __init__(self):
         self.cuentas=[]
@@ -55,5 +62,6 @@ while cuenta_num==0:
         gestor_cuentas.agregar_cuenta(cuenta_nueva)
         contraseña_nueva=str(input("Escribe la contraseña\n"))
         gestor_contraseñas.agregar_contraseña(contraseña_nueva)
+        cuenta_num +=1
     else:
         print("escribe correctamente: ")
