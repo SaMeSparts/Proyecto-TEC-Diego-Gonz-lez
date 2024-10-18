@@ -83,20 +83,20 @@ def añadir_saldo_pregunta():
 nombre_empresa = input("¿Cómo se llama tu empresa?\n")
 print(f"Bienvenido, esta es la Empresa: {nombre_empresa}\n")
 
-
+# Se abre el while para que el programa no se acabe 
 while repeticion == 0:
-
+# Se añade la opcion de agregar saldo y se imprime despues la lista de materiales
     añadir_saldo_pregunta()
     repeticion2=0
     print(f"Esta es la lista de materiales que tenemos en nuestra empresa:\n {lista_materiales_grupos} \n")
     while repeticion2==0:
-        print("\nsi quiere pagar escribe (Pagar)\n")
+        print("\nsi quiere pagar escribe (Pagar)\n")#texto para desicion de si quiere pagar o seguir utilizando el programa
         elegir_material=str(input("¿Que tipo de material quieres comprar (escribe solo el nombre del tipo no tienes que escribir el (material)\n"))
-        
 
+        # Si el usuario elige un tipo se materia se van a imprimir sus materiales con sus precios
         if elegir_material.lower()=="estructurales":
             print(f"Los precios estan en pesos $:\n{materiales_estucturales}")
-
+#While para elegir el material o materiales que desee el usuario hasta que ya no quiera elegir mas y se repite el mismo proseco con cada tipo se material y su material
             repeticion3=0
             while repeticion3==0:
                 desicion_estructural=str(input("Escoge el material (si quieres regresar escribe [r]):\n"))
@@ -113,7 +113,6 @@ while repeticion == 0:
                         repeticion3 += 1
                     else:
                         print("Escribe correctamente\n")
-
                 elif desicion_estructural.lower()=="acero":
                     print(f"El valor del acero es de {materiales_estucturales['Acero']}$/ metro cubico\n")
                     cantidad_material_acero=float(input("¿Cuanta cantidad quiere?\n"))
@@ -644,7 +643,8 @@ while repeticion == 0:
             print("Elige un tipo de material que este en la lista / escribe adecuadamente el nombre del material")
             
 
-
+# se imprime el texto para hacer una decision, si pagar o no pagar, si quiere pagar se utiliza la funcion de pagar y dentro de la funcion se toma en cuena si el usuario tiene dinero o no, si tiene el dinero se restara de su saldo y si no se le mostrara un mensaje de que no tiene suficiente saldo
+    #luego si no quiere pagar el usuario la cantidad dinerk a pagar se reiniciara
     num100=0
     print(f"Esta es la cantidad a pagar:{cantidad_pago_total}\n")
     
@@ -660,7 +660,7 @@ while repeticion == 0:
         else:
             print("escribe correctamente")
             num100+=1
-
+# Se le da la opcion al usuario si desea terminar el programa, si elige "si" se acabara el programa, de lk contrario el programa seguira corriendo hasta que el usuario lo decida
     apagar_programa=str(input("Desea terminar el programa (Si)(No)\n"))
     if apagar_programa.lower() == "si":
         repeticion += 1
